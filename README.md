@@ -1,6 +1,7 @@
-# DL_BH_fluids
+Black Hole Weather Forecasting with Deep Learning: A Pilot Study
+==============================================
 
-This is the model we proposed in [*Black Hole Weather Forecasting with Deep Learning: A Pilot Study* (Duarte, Nemmen & Navarro, MNRAS, in press)](https://arxiv.org/abs/2102.06242). All the details are available and described in the paper. This repository includes the following files:
+This is the deep learning model that we proposed in [*Black Hole Weather Forecasting with Deep Learning: A Pilot Study* (Duarte, Nemmen & Navarro, MNRAS, in press)](https://arxiv.org/abs/2102.06242). All the details are available and described in the paper. This repository includes the following files:
 
 We trained the model using Tensorflow 1.8.0 with multi_gpu (P6000 and GP100).
 
@@ -24,4 +25,8 @@ The input is a tensor `(N, 256, 192, 5)`.
 
 `inference.py`: how to create predictions using .h5 file
 
-`dl_fluids.h5`: the file contains the architecture's weights using multi gpu model and Tensorflow 1.8.0, you can load the weights through `model.load("/path/to/.h5/dl_fluids.h5")`
+# Data files
+
+You can find the data files with the trained neural network weights in our [group's data repository](https://doi.org/10.6084/m9.figshare.19412147.v1). They are in the HDF5 binary format, following Tensor Flow standards. You can load the weights using 
+
+    model.load("/path/to/.h5/dl_fluids.h5")
