@@ -8,10 +8,15 @@ The main difference is that our input accepts the temporal dimension with two-sp
 params.py: hyperparameters you can change before training the model. 
 
   epochs: the number of epochs (default = 100)
+  
   batch_size: the size of the mini-batch (default = 64)
+  
   filters: how many filters are in the first layer (default = 32)
+  
   results_path: the path where you will save the training 
+  
   alpha, beta, delta, gamma: loss function parameters (default = 0.1)
+  
 
 train.py: training settings without generator
 
