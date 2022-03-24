@@ -23,3 +23,5 @@ The input is a tensor `(N, 256, 192, 5)`.
 `train_gen.py`: training setting with a generator to save memory
 
 `inference.py`: how to create predictions using .h5 file
+
+`dl_fluids.h5`: the file contains the architecture's weights using multi gpu model and Tensorflow 1.8.0, you can load the weights through `model.load("/path/to/.h5/dl_fluids.h5")`
