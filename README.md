@@ -22,3 +22,4 @@ The input is a tensor `(N, 256, 192, 5)`.
 
 `train_gen.py`: training setting with a generator to save memory
 
+`inference.py`: how to create predictions using .h5 file
