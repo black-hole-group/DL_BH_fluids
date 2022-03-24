@@ -8,7 +8,7 @@ We trained the model using Tensorflow 1.8.0 with multi_gpu (P6000 and GP100).
 
 The main difference is that our input accepts the temporal dimension with two-spatial dimensions, while the classical U-Net accepts only the spatial dimensions. 
 
-The input is a tensor $`(N, 256, 192, 5)`$.
+The input is a tensor `(N, 256, 192, 5)`.
 
 `params.py`: hyperparameters you can change before training the model, which are the following: 
 
