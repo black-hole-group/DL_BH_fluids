@@ -1,7 +1,4 @@
 import numpy as np
-#import tensorflow as tf
-#from tensorflow.keras.utils import multi_gpu_model
-#from tensorflow.keras.engine.topology import Input
 from tensorflow.python.keras.engine.training import Model
 from tensorflow.python.keras.layers.core import Reshape, Flatten, Dense
 from tensorflow.python.keras.layers.convolutional import Conv2D, UpSampling2D
@@ -73,8 +70,5 @@ def create_auto_encoder(filters):
     c10 = conv_block(c10, m, use_bn, "conv10_2")
 
     c11 =  Conv2D(5, (1, 1), activation='linear', name="prediction") (c10) 
-    outputs_1 = c11
 
-    #c12 = Lambda(lambda x: tf.keras.backend.sum(x, axis=1))(c11)
-
-    return Model(inputs=[inputs], outputs=[outputs_1])
+    return Model(inputs=[inputs], outputs=[c11])
